@@ -10,7 +10,7 @@ import { Types } from "mongoose";
 
 // Initialize Gemini API
 const genAI = new GoogleGenerativeAI(
-  process.env.GEMINI_API_KEY || "AIzaSyBCBz3wQu9Jjd_icCDZf-17CUO_O8IynwI"
+  process.env.GEMINI_API_KEY || "AIzaSyC9CqcGnpH8CIsXmPfOTcg9z0uj0ixrbOY"
 );
 
 // Create a new chat session
@@ -42,6 +42,24 @@ export const createChatSession = async (req: Request, res: Response) => {
     });
 
     await session.save();
+
+    // Log therapy session as an activity
+    try {
+      const { Activity } = await import("../models/Activity");
+      const therapyActivity = new Activity({
+        userId,
+        type: "therapy",
+        name: "Therapy Session",
+        description: "AI therapy session started",
+        duration: 0,
+        timestamp: new Date(),
+      });
+      await therapyActivity.save();
+      logger.info(`Therapy session activity logged for user ${userId}`);
+    } catch (activityError) {
+      logger.error("Failed to log therapy session activity:", activityError);
+      // Don't fail the session creation if activity logging fails
+    }
 
     res.status(201).json({
       message: "Chat session created successfully",
@@ -268,5 +286,40 @@ export const getChatHistory = async (req: Request, res: Response) => {
   } catch (error) {
     logger.error("Error fetching chat history:", error);
     res.status(500).json({ message: "Error fetching chat history" });
+  }
+};
+
+// Get all chat sessions for a user
+export const getAllChatSessions = async (req: Request, res: Response) => {
+  try {
+    const userId = new Types.ObjectId(req.user.id);
+    
+    logger.info(`Getting all chat sessions for user: ${userId}`);
+
+    const sessions = await ChatSession.find({ userId })
+      .sort({ startTime: -1 }) // Sort by most recent first
+      .select('sessionId startTime status messages createdAt updatedAt')
+      .exec();
+
+    // Format sessions for frontend
+    const formattedSessions = sessions.map(session => ({
+      id: session.sessionId,
+      sessionId: session.sessionId,
+      startTime: session.startTime,
+      status: session.status,
+      messageCount: session.messages.length,
+      lastMessage: session.messages.length > 0 ? session.messages[session.messages.length - 1] : null,
+      createdAt: session.createdAt,
+      updatedAt: session.updatedAt,
+    }));
+
+    logger.info(`Found ${sessions.length} chat sessions for user`);
+    res.json(formattedSessions);
+  } catch (error) {
+    logger.error("Error fetching all chat sessions:", error);
+    res.status(500).json({ 
+      error: "Failed to fetch chat sessions",
+      message: error instanceof Error ? error.message : "Unknown error"
+    });
   }
 };

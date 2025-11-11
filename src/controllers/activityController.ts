@@ -3,6 +3,31 @@ import { Activity, IActivity } from "../models/Activity";
 import { logger } from "../utils/logger";
 import { sendActivityCompletionEvent } from "../utils/inngestEvents";
 
+// Get all activities for a user
+export const getActivities = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  try {
+    const userId = req.user?._id;
+
+    if (!userId) {
+      return res.status(401).json({ message: "User not authenticated" });
+    }
+
+    const activities = await Activity.find({ userId })
+      .sort({ timestamp: -1 })
+      .exec();
+
+    logger.info(`Retrieved ${activities.length} activities for user ${userId}`);
+
+    res.json(activities);
+  } catch (error) {
+    next(error);
+  }
+};
+
 // Log a new activity
 export const logActivity = async (
   req: Request,
