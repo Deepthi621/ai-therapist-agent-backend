@@ -1015,3 +1015,67 @@
 {"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T01:36:40.120Z"}
 {"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T01:37:04.805Z"}
 {"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T01:37:04.821Z"}
+{"level":"info","message":"Connected to MongoDB Atlas","timestamp":"2025-11-11T10:34:05.005Z"}
+{"level":"info","message":"Server is running on port 3001","timestamp":"2025-11-11T10:34:05.040Z"}
+{"level":"info","message":"Inngest endpoint available at http://localhost:3001/api/inngest","timestamp":"2025-11-11T10:34:05.042Z"}
+{"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:39:31.004Z"}
+{"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:39:31.115Z"}
+{"level":"info","message":"Retrieved 2 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:03.358Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:13.662Z"}
+{"level":"info","message":"Found 2 chat sessions for user","timestamp":"2025-11-11T10:42:13.929Z"}
+{"level":"info","message":"Therapy session activity logged for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:14.103Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:14.428Z"}
+{"level":"info","message":"Found 3 chat sessions for user","timestamp":"2025-11-11T10:42:14.579Z"}
+{"level":"info","message":"Processing message: hello","sessionId":"f0cf964a-e336-4c93-9979-affe0ff82c78","timestamp":"2025-11-11T10:42:21.417Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:21.441Z"}
+{"event":{"data":{"goals":[],"history":[],"memory":{"sessionContext":{"conversationThemes":[],"currentTechnique":null},"userProfile":{"emotionalState":[],"preferences":{},"riskLevel":0}},"message":"hello","systemPrompt":"You are an AI therapist assistant. Your role is to:\n        1. Provide empathetic and supportive responses\n        2. Use evidence-based therapeutic techniques\n        3. Maintain professional boundaries\n        4. Monitor for risk factors\n        5. Guide users toward their therapeutic goals"},"name":"therapy/session.message"},"level":"info","message":"Sending message to Inngest:","timestamp":"2025-11-11T10:42:21.499Z"}
+{"level":"info","message":"Found 3 chat sessions for user","timestamp":"2025-11-11T10:42:21.663Z"}
+{"emotionalState":"Neutral","level":"info","message":"Message analysis:","progressIndicators":["User engages in conversation","User expresses specific emotions or concerns"],"recommendedApproach":"Acknowledge the greeting and initiate a general, open-ended question to encourage the user to elaborate on their needs or feelings. For example: \"Hello! How are you feeling today?\"","riskLevel":0,"themes":[],"timestamp":"2025-11-11T10:42:25.246Z"}
+{"level":"error","message":"Error in sendMessage: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.","stack":"Error: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\n    at makeRequest (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:263:19)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:655:22)\n    at async sendMessage (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\src\\controllers\\chat.ts:175:28)","timestamp":"2025-11-11T10:42:26.370Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:26.424Z"}
+{"level":"info","message":"Found 3 chat sessions for user","timestamp":"2025-11-11T10:42:26.463Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:42:32.811Z"}
+{"level":"info","message":"Found 3 chat sessions for user","timestamp":"2025-11-11T10:42:32.872Z"}
+{"level":"info","message":"Therapy session activity logged for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:00.093Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:00.381Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:00.444Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:00.515Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:00.622Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:06.213Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:06.623Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:20.784Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:20.876Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:21.038Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:21.181Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:27.455Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:27.660Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:52.269Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:52.360Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:43:52.516Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:43:52.627Z"}
+{"level":"info","message":"Processing message: hi","sessionId":"99f7f2c4-4fd1-45ed-8807-dd669607f7c1","timestamp":"2025-11-11T10:44:00.676Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:44:00.708Z"}
+{"event":{"data":{"goals":[],"history":[],"memory":{"sessionContext":{"conversationThemes":[],"currentTechnique":null},"userProfile":{"emotionalState":[],"preferences":{},"riskLevel":0}},"message":"hi","systemPrompt":"You are an AI therapist assistant. Your role is to:\n        1. Provide empathetic and supportive responses\n        2. Use evidence-based therapeutic techniques\n        3. Maintain professional boundaries\n        4. Monitor for risk factors\n        5. Guide users toward their therapeutic goals"},"name":"therapy/session.message"},"level":"info","message":"Sending message to Inngest:","timestamp":"2025-11-11T10:44:00.773Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:44:00.826Z"}
+{"emotionalState":"Neutral","level":"info","message":"Message analysis:","progressIndicators":[],"recommendedApproach":"Acknowledge the greeting and initiate a conversation to understand the user's needs and goals.","riskLevel":0,"themes":[],"timestamp":"2025-11-11T10:44:03.340Z"}
+{"level":"error","message":"Error in sendMessage: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.","stack":"Error: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\n    at makeRequest (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:263:19)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:655:22)\n    at async sendMessage (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\src\\controllers\\chat.ts:175:28)","timestamp":"2025-11-11T10:44:05.655Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:44:05.881Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:44:06.044Z"}
+{"level":"info","message":"Retrieved 4 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:45:42.356Z"}
+{"level":"info","message":"Retrieved 4 activities for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:45:42.386Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:46:08.155Z"}
+{"level":"info","message":"Found 4 chat sessions for user","timestamp":"2025-11-11T10:46:08.199Z"}
+{"level":"info","message":"Therapy session activity logged for user 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:46:08.477Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:46:08.803Z"}
+{"level":"info","message":"Found 5 chat sessions for user","timestamp":"2025-11-11T10:46:08.897Z"}
+{"level":"info","message":"Processing message: how are you","sessionId":"4a27c220-a361-400c-b243-e61504abc042","timestamp":"2025-11-11T10:46:13.846Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:46:13.869Z"}
+{"event":{"data":{"goals":[],"history":[],"memory":{"sessionContext":{"conversationThemes":[],"currentTechnique":null},"userProfile":{"emotionalState":[],"preferences":{},"riskLevel":0}},"message":"how are you","systemPrompt":"You are an AI therapist assistant. Your role is to:\n        1. Provide empathetic and supportive responses\n        2. Use evidence-based therapeutic techniques\n        3. Maintain professional boundaries\n        4. Monitor for risk factors\n        5. Guide users toward their therapeutic goals"},"name":"therapy/session.message"},"level":"info","message":"Sending message to Inngest:","timestamp":"2025-11-11T10:46:13.908Z"}
+{"level":"info","message":"Found 5 chat sessions for user","timestamp":"2025-11-11T10:46:13.946Z"}
+{"level":"error","message":"Error in sendMessage: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.","stack":"Error: [429 Too Many Requests] Resource exhausted. Please try again later. Please refer to https://cloud.google.com/vertex-ai/generative-ai/docs/error-code-429 for more details.\n    at makeRequest (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:263:19)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async generateContent (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\node_modules\\@google\\generative-ai\\dist\\index.js:655:22)\n    at async sendMessage (C:\\Users\\iamde\\OneDrive\\Documents\\Capstone projects\\ai-therapist-agent\\backend\\src\\controllers\\chat.ts:150:28)","timestamp":"2025-11-11T10:46:16.863Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:46:16.936Z"}
+{"level":"info","message":"Found 5 chat sessions for user","timestamp":"2025-11-11T10:46:16.975Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:48:24.364Z"}
+{"level":"info","message":"Found 5 chat sessions for user","timestamp":"2025-11-11T10:48:24.409Z"}
+{"level":"info","message":"Getting all chat sessions for user: 69129114cc306a88f02c9ff6","timestamp":"2025-11-11T10:48:24.513Z"}
+{"level":"info","message":"Found 5 chat sessions for user","timestamp":"2025-11-11T10:48:24.550Z"}
